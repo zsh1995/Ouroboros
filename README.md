@@ -11,3 +11,7 @@
 > `javac -cp opt-tail-recursion-1.0-SNAPSHOT.jar Fibo.java`
 3. 使用编译的 agent 运行代码,
 > `java -javaagent:.\opt-tail-recursion-1.0-SNAPSHOT.jar Fibo [:<第 n 项>...]`
+
+## agent 命令
+使用debug模式，默认输出debug.log到当前目录下，修改后的 class 文件到 ./output 下。
+> `java -javaagent:.\opt-tail-recursion-1.0-SNAPSHOT.jar='-d [y|n] -l <log path> -o <修改后类文件保存目录>' [:<类名>]`
